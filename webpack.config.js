@@ -1,13 +1,13 @@
-var webpack = require("webpack");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+let webpack = require("webpack");
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let path = require('path');
 
 module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx', '.json']
     },
     //devtool: 'eval-source-map', // more info:https://webpack.github.io/docs/build-performance.html#sourcemaps and https://webpack.github.io/docs/configuration.html#devtool
-    devtool: 'source-map',
+    devtool: '#source-map',
     entry: [
         // must be first entry to properly set public path
         //'./src/webpack-public-path',
@@ -22,12 +22,8 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development'), // Tells React to build in either dev or prod modes. https://facebook.github.io/react/downloads.html (See bottom)
-            __DEV__: true
-        }),
         //new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(),
+        //new webpack.NoEmitOnErrorsPlugin(),
         new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
             template: 'src/index.ejs',
             minify: {

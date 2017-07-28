@@ -1,3 +1,6 @@
-console.clear();
-console.log("Hi");
-let j = 3 + 2;
+import React from "react";
+import ReactDOM from "react-dom";
+import Layout from "./components/Layout";
+
+const app = document.getElementById('app');
+ReactDOM.render(<Layout />, app);

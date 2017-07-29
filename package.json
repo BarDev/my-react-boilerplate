@@ -1,5 +1,5 @@
 {
-  "name": "react-slingshot",
+  "name": "my-react-boiler-plate",
   "version": "1.0.0",
   "description": "Starter kit for creating apps with React and Redux",
   "scripts": {
@@ -26,8 +26,7 @@
     "rimraf": "2.6.1",
     "webpack": "3.1.0",
     "webpack-bundle-analyzer": "2.8.2",
-    "webpack-dev-server": "2.6.1",
-    "webpack-md5-hash": "0.0.5"
+    "webpack-dev-server": "2.6.1"
   },
   "keywords": [
     "react",

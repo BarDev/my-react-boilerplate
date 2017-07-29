@@ -3,12 +3,16 @@ import React from "react";
 class Layout extends React.Component {
     constructor(){
         super();
-        this.name = "Mike";
+        this.state = {name: "Mike"}
     }
 
     render() {
+        //Simulate an user action
         return(
-            <h1>It's is cool</h1>
+            <div>
+                <h1>It's is cool</h1>
+                <span>{this.state.name}</span>
+            </div>
         );
     }
 }
